@@ -45,10 +45,15 @@ def get_js_runtime():
         return _js_runtime
     except ImportError:
         try:
-            # 备选使用 PyExecJS
+            # 备选使用 PyExecJS，明确指定使用 Node.js
             import execjs
-            _js_runtime = execjs
-            logger.info("使用 PyExecJS 作为JavaScript运行时")
+            # 尝试使用Node.js运行时
+            try:
+                _js_runtime = execjs.get("Node")
+                logger.info("使用 PyExecJS (Node.js) 作为JavaScript运行时")
+            except:
+                _js_runtime = execjs
+                logger.info("使用 PyExecJS (默认运行时) 作为JavaScript运行时")
             return _js_runtime
         except ImportError:
             logger.error("未安装JavaScript运行时环境，请安装: pip install mini-racer 或 pip install PyExecJS")
@@ -145,10 +150,12 @@ def generateSignature(wss, script_file='sign.js'):
             js_code = f.read()
         
         # 根据不同的运行时执行JavaScript
-        if hasattr(js_runtime, 'eval'):  # py_mini_racer
+        # 检查是否是 MiniRacer 实例（它有 call 方法但没有 compile 方法）
+        if hasattr(js_runtime, 'call') and not hasattr(js_runtime, 'compile'):  # py_mini_racer
             js_runtime.eval(js_code)
             signature = js_runtime.call("get_sign", md5_param)
         else:  # PyExecJS
+            # PyExecJS需要使用compile方法
             ctx = js_runtime.compile(js_code)
             signature = ctx.call("get_sign", md5_param)
             
@@ -156,6 +163,8 @@ def generateSignature(wss, script_file='sign.js'):
             
     except Exception as e:
         logger.error(f"生成签名时出错: {str(e)}")
+        import traceback
+        logger.error(f"详细错误: {traceback.format_exc()}")
         return None
 
 class DouyinLiveCrawler:
