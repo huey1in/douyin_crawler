@@ -163,7 +163,9 @@ douyin_crawler/
 抓取已停止
 ```
 
----
+##
+
+[![Star History Chart](https://api.star-history.com/svg?repos=huey1in/douyin_crawler&type=date&legend=top-left)](https://www.star-history.com/#huey1in/douyin_crawler&type=date&legend=top-left)
 
 ## 免责声明
 
