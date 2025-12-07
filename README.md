@@ -135,34 +135,6 @@ douyin_crawler/
 
 ---
 
-## 运行日志
-
-程序运行时会输出实时日志：
-
-```
-2025-12-07 12:00:00,000 - INFO - 开始抓取直播间: 646454278948
-2025-12-07 12:00:01,123 - INFO - 使用 py_mini_racer 作为JavaScript运行时
-2025-12-07 12:00:02,456 - INFO - WebSocket连接已建立
-2025-12-07 12:00:03,789 - INFO - [聊天] 用户A: 主播好棒！
-2025-12-07 12:00:04,012 - INFO - [礼物] 用户B 送出 玫瑰 x1
-2025-12-07 12:00:05,345 - INFO - [进入] 用户C 进入直播间
-2025-12-07 12:00:06,678 - INFO - [点赞] 收到 5 个点赞
-2025-12-07 12:05:00,234 - INFO - 数据已保存到: data/live_data/646454278948_1_2025-12-07.json
-```
-
----
-
-## 停止程序
-
-在终端中按 `Ctrl+C` 即可优雅停止程序，程序会自动保存当前数据。
-
-```bash
-^C
-正在停止抓取...
-数据已保存到: data/live_data/646454278948_1_2025-12-07.json
-抓取已停止
-```
-
 ##
 
 [![Star History Chart](https://api.star-history.com/svg?repos=huey1in/douyin_crawler&type=date&legend=top-left)](https://www.star-history.com/#huey1in/douyin_crawler&type=date&legend=top-left)
