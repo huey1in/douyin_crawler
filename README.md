@@ -5,6 +5,7 @@
 [![GitHub Stars](https://img.shields.io/github/stars/huey1in/douyin_crawler?style=flat-square&logo=github)](https://github.com/huey1in/douyin_crawler)
 [![GitHub Forks](https://img.shields.io/github/forks/huey1in/douyin_crawler?style=flat-square&logo=github)](https://github.com/huey1in/douyin_crawler)
 [![Python Version](https://img.shields.io/badge/Python-3.11.9+-blue?style=flat-square&logo=python)](https://www.python.org/)
+[![Repo Views](https://komarev.com/ghpvc/?username=huey1in&repo=douyin_crawler&style=flat-square&color=orange&label=Clone+%26+Views)](https://github.com/huey1in/douyin_crawler)
 [![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
 
 **最后测试时间：2025-12-16** | **状态：可用**
