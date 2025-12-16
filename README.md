@@ -1,13 +1,13 @@
 # 抖音直播间数据爬虫
 
-> 一个专门用于采集抖音直播间数据的高效命令行工具
+> 一个专门用于采集抖音直播间数据的工具
 
 [![GitHub Stars](https://img.shields.io/github/stars/huey1in/douyin_crawler?style=flat-square&logo=github)](https://github.com/huey1in/douyin_crawler)
 [![GitHub Forks](https://img.shields.io/github/forks/huey1in/douyin_crawler?style=flat-square&logo=github)](https://github.com/huey1in/douyin_crawler)
 [![Python Version](https://img.shields.io/badge/Python-3.11.9+-blue?style=flat-square&logo=python)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
 
-**最后测试时间：2025-12-27** | **状态：可用**
+**最后测试时间：2025-12-16** | **状态：可用**
 
 
 ## 安装指南
